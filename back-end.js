@@ -63,6 +63,9 @@ const priority1Only = function (todos) {
   return todos.filter(isLowPriority)
 
 }
+// const notCompleteFirst = function(todos){
+//   return todos.
+// }
 
 
 if (typeof notCompleteFirst === 'undefined') {
