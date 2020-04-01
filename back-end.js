@@ -33,7 +33,6 @@ const isLowPriority = function(todo) {
 }
 
 
-
 /***********************
  * ITERATION FUNCTIONS *
  ***********************/
@@ -62,7 +61,9 @@ const priority2Only = function (todos) {
 
 const priority1Only = function (todos) {
   return todos.filter(isLowPriority)
+
 }
+
 
 if (typeof notCompleteFirst === 'undefined') {
   notCompleteFirst = undefined;

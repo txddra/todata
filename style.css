@@ -1,3 +1,32 @@
 .complete {
   text-decoration: line-through;
 }
+
+
+.toggle-priorities{
+background-color: pink;
+border-color: rosybrown;
+border-style: solid ;
+}
+.hide-complete{
+  background-color: pink;
+border-color: rosybrown;
+border-style: solid;
+}
+.hide-low-priority{
+  background-color: pink;
+  border-color: rosybrown;
+  border-style: solid;
+}
+.high-priority-first{
+  background-color: pink;
+border-color: rosybrown;
+border-style: solid;
+
+}
+.complete-last{
+  background-color: pink;
+border-color: rosybrown;
+border-style: solid;
+}
+
