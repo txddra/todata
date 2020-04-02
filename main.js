@@ -78,3 +78,5 @@ document.querySelector('.complete-last').addEventListener('click', function(){
 
     
 })
+
+document.querySelector('.clear-all').addEventListener('click',)
