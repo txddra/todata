@@ -1,6 +1,19 @@
-// document.querySelector('.toggle-priorities').addEventListener('click',function(){
+document.querySelector('.toggle-priorities').addEventListener('click',function(){
+const hideME = document.querySelector('.toggle-priorities')
+if(hideME.innerText === "Show Priorities"){
 
-// })
+    hideME.innerText = "Hide Priorities"
+    currentTodos = namesAndPriorities(currentTodos)
+    
+
+}else if(hideME.innerText === "Hide Priorities"){
+
+    hideME.innerText = "Show Priorities"
+    currentTodos = todos.slice()
+}
+refreshTodos(currentTodos)
+
+})
 
 document.querySelector('.hide-complete').addEventListener('click', function(){
     
@@ -20,11 +33,34 @@ refreshTodos()
 })
 
 document.querySelector('.hide-low-priority').addEventListener('click', function(){
+    
+        const hideME = document.querySelector('.hide-low-priority')
+        if(hideME.innerText === 'Hide Low Priority'){ currentTodos = priority2Only(currentTodos)
+        hideME.innerText ='Show Low Priority'
+        }
+        else if(hideME.innerText === 'Show Low Priority'){
+            currentTodos = [...todos]
+        hideME.innerText ='Hide Low Priority'
+        }
+        
+        refreshTodos(currentTodos)
+    })
 
-})
 
 document.querySelector('.high-priority-first').addEventListener('click',function(){
-
+    
+        const hideME = document.querySelector('.high-priority-first')
+        if (hideME.innerText === 'High Priority First') {
+            currentTodos = priority2First(currentTodos)
+            hideME.innerText = 'Original Order';
+        } else if (hideME.innerText === 'Original Order'){
+            currentTodos = [...todos];
+            hideME.innerText = 'High Priority First';
+    
+        }
+        
+        refreshTodos()
+       
 })
 
 document.querySelector('.complete-last').addEventListener('click', function(){

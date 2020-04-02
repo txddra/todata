@@ -31,7 +31,24 @@ const isHighPriority = function(todo) {
 const isLowPriority = function(todo) {
   return todo.priority === 1
 }
+const preNotComplete = function(param,paramA){
+  if (getCompleteness(param) > getCompleteness(paramA)){
+    return 1
+  } else if(getCompleteness(param) < getCompleteness(paramA)){
+    return -1
+  } 
+    return 0
+  }
 
+  const prePriority2 = function(param,paramA){
+    if (getPriority(param) > getPriority(paramA)){
+      return -1
+    } else if(getPriority(param) < getPriority(paramA)){
+      return 1
+    } 
+      return 0
+  }
+  
 
 /***********************
  * ITERATION FUNCTIONS *
@@ -44,7 +61,8 @@ const names = function (todos) {
 const namesAndPriorities = (todos) => todos.map((todo) => {
     const priority = todo.priority === 2 ? 'High' : 'Low';
 
-    return `${todo.text} - ${priority}`
+    todo.text = `${todo.text} - ${priority}`
+    return todo
 })
 
 const justNotComplete = function (todos) {
@@ -63,9 +81,13 @@ const priority1Only = function (todos) {
   return todos.filter(isLowPriority)
 
 }
-// const notCompleteFirst = function(todos){
-//   return todos.
-// }
+ const notCompleteFirst = function(todos){
+  return todos.filter(preNotComplete)
+ }
+
+const priority2First = function(todos){
+  return todos.filter(prePriority2)
+}
 
 
 if (typeof notCompleteFirst === 'undefined') {
