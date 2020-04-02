@@ -35,12 +35,13 @@ refreshTodos()
 document.querySelector('.hide-low-priority').addEventListener('click', function(){
     
         const hideME = document.querySelector('.hide-low-priority')
-        if(hideME.innerText === 'Hide Low Priority'){ currentTodos = priority2Only(currentTodos)
-        hideME.innerText ='Show Low Priority'
+        if(hideME.innerText === "Hide Low Priority"){ currentTodos = priority2Only(currentTodos)
+        hideME.innerText ="Show Low Priority"
         }
-        else if(hideME.innerText === 'Show Low Priority'){
-            currentTodos = [...todos]
-        hideME.innerText ='Hide Low Priority'
+        else if(hideME.innerText === "Show Low Priority"){
+            hideME.innerText ="Hide Low Priority"
+            currentTodos = todos.slice()
+       
         }
         
         refreshTodos(currentTodos)
@@ -50,19 +51,30 @@ document.querySelector('.hide-low-priority').addEventListener('click', function(
 document.querySelector('.high-priority-first').addEventListener('click',function(){
     
         const hideME = document.querySelector('.high-priority-first')
-        if (hideME.innerText === 'High Priority First') {
+        if (hideME.innerText === "High Priority First") {
             currentTodos = priority2First(currentTodos)
-            hideME.innerText = 'Original Order';
-        } else if (hideME.innerText === 'Original Order'){
-            currentTodos = [...todos];
-            hideME.innerText = 'High Priority First';
+            hideME.innerText = "Original Order";
+        } else if (hideME.innerText === "Original Order"){hideME.innerText = "High Priority First"
+            currentTodos = todos.slice()
+            
     
         }
         
         refreshTodos()
-       
+
 })
 
 document.querySelector('.complete-last').addEventListener('click', function(){
+    const hideME = document.querySelector('.complete-last')
+    if (hideME.innerText === "Complete Last") {
+        currentTodos = notCompleteFirst([...todos])
+        hideME.innerText = "Original Order"
+    } else if (hideME.innerText ==="Original Order"){
+        hideME.innerText = "Complete Last"
+        currentTodos = todos.slice()
+        
+    }
+    refreshTodos()
+
     
 })
