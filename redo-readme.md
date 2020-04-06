@@ -34,6 +34,11 @@ remedy all of your problems:
 `[pic]`
 4. watch your text appear in a numbered list
 `[pic]`
+
+---
+
 ![](https://www.yourdictionary.com/images/definitions/lg/7282.gasp.jpg)
+
+
 would you look at that simplicity
 ## Easy Peasey
