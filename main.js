@@ -67,7 +67,7 @@ document.querySelector('.high-priority-first').addEventListener('click',function
 document.querySelector('.complete-last').addEventListener('click', function(){
     const hideME = document.querySelector('.complete-last')
     if (hideME.innerText === "Complete Last") {
-        currentTodos = notCompleteFirst([...todos])
+        currentTodos = notCompleteFirst(todos.slice())
         hideME.innerText = "Original Order"
     } else if (hideME.innerText ==="Original Order"){
         hideME.innerText = "Complete Last"
@@ -79,4 +79,6 @@ document.querySelector('.complete-last').addEventListener('click', function(){
     
 })
 
-document.querySelector('.clear-all').addEventListener('click',)
+document.querySelector('.clear-all').addEventListener('click',function(){
+    clearTodos()
+})

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <div class= "all">
   <head>
     <title>The only to-do list you'll need</title>
     <meta charset="UTF-8">
@@ -9,6 +10,7 @@
   <body>
     <div class="app">
       <h1>Todo</h1>
+      <h2>or Todon't</h2>
         <section>
           <label for="todo-input">Add Some Things To-Do:</label></br>
           <input class="todo-input "type="text" name="todo-input">
@@ -17,17 +19,18 @@
             <option value="1">Low</option>
             <option value="2">High</option>
           </select>
-          <button class="add-todo">ADD</button>
+          <button class="add-todo">ADD</button></br></br>
         </section>
         <section>
-          <button class="toggle-priorities">Show Priorities</button></br>
-          <button class="hide-complete">Hide Complete</button></br>
-          <button class="hide-low-priority">Hide Low Priority</button></br>
-          <button class="high-priority-first">High Priority First</button></br>
-          <button class="complete-last">Complete Last</button></section></br>
-          <button class ="clear-all">Clear all</button>
+          <button class="toggle-priorities">Show Priorities</button>
+          <button class="hide-complete">Hide Complete</button>
+          <button class="hide-low-priority">Hide Low Priority</button>
+          <button class="high-priority-first">High Priority First</button>
+          <button class="complete-last">Complete Last</button></section>
+          
         </section>
       <ol class="todo-list"></ol>
+      <center><button class ="clear-all">Clear</button></center>
     </div>
     
     <script src="./main.js"></script>
@@ -47,4 +50,6 @@
     <script src="./complete-last-button-controller.js"></script>
     <script src="add-todos-button-controller.js"></script>
   </body>
+  </div>
+
 </html>
